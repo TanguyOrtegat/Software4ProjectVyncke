@@ -3,17 +3,17 @@ package domain;
 public class Commercieleketel extends Ketel {
 
 
-    private String Specificaties;//Moet dit een list zijn??
+    private String specificaties;//Moet dit een list zijn?
 
-    public Commercieleketel(int id, String type, String Specificaties){
+    public Commercieleketel(int id, String type, String specificaties){
         super(id,type);
-        this.Specificaties = Specificaties;
+        this.specificaties = specificaties;
     }
 
     public String getSpecificaties() {
-        return Specificaties;
+        return specificaties;
     }
     public void setSpecificaties(String specificaties) {
-        Specificaties = specificaties;
+        specificaties = specificaties;
     }
 }

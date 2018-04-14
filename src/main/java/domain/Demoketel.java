@@ -15,16 +15,16 @@ public class Demoketel extends Ketel {
         this.status = status;
     }
 
-    public void BeschikbaarZetten(){
+    public void beschikbaarZetten(){
          this.status ="Beschikbaar";
      }
-     public void LatenRepareren(){
+     public void latenRepareren(){
          this.status ="Onder Reparatie...";
      }
-     public void TerugHalen(){
+     public void terugHalen(){
          this.status = "Beschikbaar";
      }
-     public  void Uitlenen(){
+     public  void uitlenen(){
          this.status = "Uitgeleend";
      }
 }
