@@ -16,15 +16,15 @@ public class Personeel extends Persoon {
         this.functie = functie;
     }
 
-    public void BeschikbaarStellen(){
+    public void beschikbaarStellen(){
 
     }
 
-    public void Ontslaan() {
+    public void ontslaan() {
 
     }
 
-    public void VerlofNemen() {
+    public void verlofNemen() {
 
     }
 
