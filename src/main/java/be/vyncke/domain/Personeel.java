@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "Personeel")
+@Table(name = "personeel")
 public class Personeel extends Persoon implements Serializable {
 
     private static final long serialVersionUID = 1L;

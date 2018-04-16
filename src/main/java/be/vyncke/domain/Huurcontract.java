@@ -12,7 +12,7 @@ public class Huurcontract implements Serializable {
 
     @javax.persistence.Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private int Id;
+    private int id;
 
     @Column
     private Date einddag;
@@ -45,11 +45,11 @@ public class Huurcontract implements Serializable {
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
     public Ketel getKetel() {
@@ -71,7 +71,7 @@ public class Huurcontract implements Serializable {
     public Huurcontract(Date einddag, Date startdag, int id, Demoketel ketel, Klant klant) {
         this.einddag = einddag;
         this.startdag = startdag;
-        Id = id;
+        this.id = id;
         this.ketel = ketel;
         this.klant = klant;
     }

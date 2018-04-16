@@ -12,10 +12,10 @@ public class Bestelling implements Serializable {
 
     @javax.persistence.Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private int Id;
+    private int id;
 
     @OneToMany(mappedBy = "bestelling")
-    private List<Ketel> Items;
+    private List<Ketel> items;
 
     @OneToOne
     @JoinColumn(name = "klant_id")
@@ -23,19 +23,19 @@ public class Bestelling implements Serializable {
 
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
     public List<Ketel> getItems() {
-        return Items;
+        return items;
     }
 
     public void setItems(List<Ketel> items) {
-        Items = items;
+        this.items = items;
     }
 
     public Klant getKlant() {
@@ -47,8 +47,8 @@ public class Bestelling implements Serializable {
     }
 
     public Bestelling(int id, List<Ketel> items, Klant klant) {
-        Id = id;
-        Items = items;
+        this.id = id;
+        this.items = items;
         this.klant = klant;
     }
 
