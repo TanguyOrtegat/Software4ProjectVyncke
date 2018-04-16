@@ -1,6 +1,7 @@
 package be.odisee.brainstorm.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -37,12 +38,17 @@ public class Persoon implements Serializable {
     @Column
     private String paswoord;
 
+    private Date geboorteDatum;
+
     // we zullen nu toch een verwijzing naar Persoon in Rol moeten toevoegen
     @OneToMany(fetch=FetchType.EAGER,mappedBy="persoon")
     private Set<Rol> m_Rollen= new HashSet<Rol>();
 
-    public Persoon(){
-
+    public Persoon(int id, Date geboorteDatum, String voornaam, String familienaam) {
+        this.id = id;
+        this.geboorteDatum = geboorteDatum;
+        this.voornaam = voornaam;
+        this.familienaam = familienaam;
     }
 
     public Persoon(String status, String voornaam, String familienaam, String emailadres, String paswoord) {
