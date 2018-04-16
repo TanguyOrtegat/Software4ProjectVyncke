@@ -38,6 +38,7 @@ public class Persoon implements Serializable {
     @Column
     private String paswoord;
 
+    @Column
     private Date geboorteDatum;
 
     // we zullen nu toch een verwijzing naar Persoon in Rol moeten toevoegen
