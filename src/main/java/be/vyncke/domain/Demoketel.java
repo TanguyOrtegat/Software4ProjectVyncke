@@ -1,10 +1,21 @@
 package be.vyncke.domain;
 
-public class Demoketel extends Ketel {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.io.Serializable;
+
+@Entity
+@Table(name = "demoketels")
+public class Demoketel extends Ketel implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Column
      private String status;
 
      public Demoketel(int id, String type, Bestelling bestelling){
-         super(id,type,bestelling);
+         super(id,type);
          this.status = "Beschikbaar";
      }
 

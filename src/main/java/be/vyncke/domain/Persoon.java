@@ -10,8 +10,7 @@ import javax.persistence.*;
 // @Index bij een veld is deprecated, 
 // javax.persistence.Index is te gebruiken en 
 // die moet als deel van @Table worden meegegeven
-@Entity
-@Table(name="personen")
+@MappedSuperclass
 public class Persoon implements Serializable {
 
 	private static final long serialVersionUID = 1L;

@@ -1,15 +1,21 @@
 package be.vyncke.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
-
+@Entity
+@Table(name="klanten")
 public class Klant extends Persoon implements Serializable {
-    private int persoon_ID;
+
+    private static final long serialVersionUID = 1L;
+
+    @Column
     private String bedrijf;
-    private String email;
-    private String lijstHuurContracten;
-    private enum type {};
+    @Column
+    private String emailBedrijf;
 
     public String getBedrijf() {
         return bedrijf;
@@ -19,27 +25,17 @@ public class Klant extends Persoon implements Serializable {
         this.bedrijf = bedrijf;
     }
 
-    public String getEmail() {
-        return email;
+    public String getEmailBedrijf() {
+        return emailBedrijf;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmailBedrijf(String email) {
+        this.emailBedrijf = email;
     }
 
-    public String getLijstHuurContracten() {
-        return lijstHuurContracten;
-    }
-
-    public void setLijstHuurContracten(String lijstHuurContracten) {
-        this.lijstHuurContracten = lijstHuurContracten;
-    }
-
-    public Klant(int persoon_ID, Date geboorteDatum, String voornaam, String achternaam, int persoon_ID1, String bedrijf, String email, String lijstHuurContracten) {
+    public Klant(int persoon_ID, Date geboorteDatum, String voornaam, String achternaam, String bedrijf, String email) {
         super(persoon_ID, geboorteDatum, voornaam, achternaam);
-        this.persoon_ID = persoon_ID1;
         this.bedrijf = bedrijf;
-        this.email = email;
-        this.lijstHuurContracten = lijstHuurContracten;
+        this.emailBedrijf = email;
     }
 }
